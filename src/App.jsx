@@ -1,19 +1,54 @@
 import { useState } from "react";
 import "./App.css";
 import UserFormComponent from "./components/UserFormComponent";
+import UserDetailsComponent from "./components/UserDetailsComponent";
 
 function App() {
   const [username, setUsername] = useState("");
+  const [userData, setUserData] = useState(null);
+  const [repos, setRepos] = useState([]);
 
-  function handleSubmit() {}
+  const handleSubmit = async () => {
+    try {
+      const userResponse = await fetch(
+        `https://api.github.com/users/${username}`
+      );
+      const userJson = await userResponse.json();
+      const reposResponse = await fetch(
+        `https://api.github.com/users/${username}/repos`
+      );
+      const reposJson = await reposResponse.json();
+
+      setUserData(userJson);
+      setRepos(reposJson);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  function resetUser() {
+    setUserData(null);
+  }
 
   return (
     <>
-      <UserFormComponent
-        username={username}
-        onUsernameChange={setUsername}
-        onSubmit={handleSubmit}
-      ></UserFormComponent>
+      {!userData && (
+        <UserFormComponent
+          username={username}
+          onUsernameChange={setUsername}
+          onSubmit={handleSubmit}
+        ></UserFormComponent>
+      )}
+
+      {userData && (
+        <UserDetailsComponent
+          userAvatarSrc={userData.avatar_url}
+          username={username}
+          userBio={userData.bio}
+          userLocation={userData.location}
+          onReset={resetUser}
+        ></UserDetailsComponent>
+      )}
     </>
   );
 }
