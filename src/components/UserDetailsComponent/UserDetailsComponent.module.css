@@ -1,1 +1,44 @@
+.userDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: clamp(360px, 33vw, 720px);
+  height: 90vh;
+  padding: 2rem;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+}
 
+.userHeader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.userAvatar {
+  height: 8rem;
+  width: 8rem;
+}
+
+.userName {
+  margin-left: 30px;
+  font-size: 3rem;
+}
+
+.detailsLabel {
+  font-size: 0.8rem;
+}
+
+.userBio {
+  margin-top: 2rem;
+}
+
+.userLocation {
+  margin-top: 0.5rem;
+}
+
+.reposLabel {
+  margin-block: 0.5rem;
+}

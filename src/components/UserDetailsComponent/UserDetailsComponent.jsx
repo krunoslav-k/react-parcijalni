@@ -21,9 +21,15 @@ export default function UserDetailsComponent({
         <h1 className={styles.userName}>{username}</h1>
       </div>
 
-      <p className={styles.userBio}>BIO: {userBio}</p>
-      <p className={styles.userLocation}>LOCATION: {userLocation}</p>
-
+      <p className={`${styles.userBio} ${styles.detailsLabel}`}>
+        <strong>BIO:</strong> {userBio}
+      </p>
+      <p className={`${styles.userLocation} ${styles.detailsLabel}`}>
+        <strong>LOCATION:</strong> {userLocation}
+      </p>
+      <p className={`${styles.reposLabel} ${styles.detailsLabel}`}>
+        <strong>REPOSITORIES:</strong>
+      </p>
       <RepoListComponent repos={userRepos}></RepoListComponent>
 
       <button className={styles.resetButton} onClick={onReset}>
