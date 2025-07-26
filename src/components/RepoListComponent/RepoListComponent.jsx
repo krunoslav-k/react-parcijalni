@@ -5,7 +5,7 @@ export default function RepoListComponent({ repos }) {
   return (
     <div className={styles.reposListWrapper}>
       <ul className={styles.reposList}>
-        {repos.map((repo) => (
+        {repos.slice(0, 12).map((repo) => (
           <li key={repo.id} className={styles.repoItem}>
             {repo.name}
           </li>
