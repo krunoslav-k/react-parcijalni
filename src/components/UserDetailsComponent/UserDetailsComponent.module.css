@@ -1,14 +1,7 @@
 .userDetailsContainer {
-  display: flex;
-  flex-direction: column;
   justify-content: start;
-  align-items: start;
-  width: clamp(360px, 33vw, 720px);
-  height: 90vh;
-  padding: 2rem;
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+  align-items: stretch;
+  text-align: left;
 }
 
 .userHeader {
@@ -18,13 +11,13 @@
 }
 
 .userAvatar {
-  height: 8rem;
-  width: 8rem;
+  height: 7rem;
+  width: 7rem;
 }
 
 .userName {
   margin-left: 30px;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .detailsLabel {
@@ -32,7 +25,7 @@
 }
 
 .userBio {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .userLocation {
@@ -41,4 +34,8 @@
 
 .reposLabel {
   margin-block: 0.5rem;
+}
+
+.resetButton {
+  margin-top: 1.5rem;
 }

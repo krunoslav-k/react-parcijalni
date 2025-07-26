@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
+import clsx from "clsx";
 import styles from "./UserDetailsComponent.module.css";
+import sharedStyles from "../../styles/sharedStyles.module.css";
 import RepoListComponent from "../RepoListComponent/RepoListComponent";
 
 export default function UserDetailsComponent({
@@ -11,7 +13,7 @@ export default function UserDetailsComponent({
   userRepos,
 }) {
   return (
-    <div className={styles.userDetailsContainer}>
+    <div className={clsx(styles.userDetailsContainer, sharedStyles.container)}>
       <div className={styles.userHeader}>
         <img
           src={userAvatarSrc}
@@ -21,18 +23,21 @@ export default function UserDetailsComponent({
         <h1 className={styles.userName}>{username}</h1>
       </div>
 
-      <p className={`${styles.userBio} ${styles.detailsLabel}`}>
+      <p className={clsx(styles.userBio, styles.detailsLabel)}>
         <strong>BIO:</strong> {userBio}
       </p>
-      <p className={`${styles.userLocation} ${styles.detailsLabel}`}>
+      <p className={clsx(styles.userLocation, styles.detailsLabel)}>
         <strong>LOCATION:</strong> {userLocation}
       </p>
-      <p className={`${styles.reposLabel} ${styles.detailsLabel}`}>
+      <p className={clsx(styles.reposLabel, styles.detailsLabel)}>
         <strong>REPOSITORIES:</strong>
       </p>
       <RepoListComponent repos={userRepos}></RepoListComponent>
 
-      <button className={styles.resetButton} onClick={onReset}>
+      <button
+        className={clsx(styles.resetButton, sharedStyles.baseField)}
+        onClick={onReset}
+      >
         Reset
       </button>
     </div>
