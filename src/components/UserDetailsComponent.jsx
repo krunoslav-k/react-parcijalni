@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import RepoListComponent from "./RepoListComponent";
 
 export default function UserDetailsComponent({
   userAvatarSrc,
@@ -6,6 +7,7 @@ export default function UserDetailsComponent({
   userBio,
   userLocation,
   onReset,
+  userRepos,
 }) {
   return (
     <div className="user-details-container">
@@ -17,7 +19,7 @@ export default function UserDetailsComponent({
       <p className="user-bio">BIO: {userBio}</p>
       <p className="user-location">LOCATION: {userLocation}</p>
 
-      <>RepoListComponent holder</>
+      <RepoListComponent repos={userRepos}></RepoListComponent>
 
       <button className="reset-button" onClick={onReset}>
         Reset

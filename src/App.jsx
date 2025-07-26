@@ -47,6 +47,7 @@ function App() {
           userBio={userData.bio}
           userLocation={userData.location}
           onReset={resetUser}
+          userRepos={repos}
         ></UserDetailsComponent>
       )}
     </>
