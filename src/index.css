@@ -28,6 +28,7 @@ a:hover {
 }
 
 body {
+  background: linear-gradient(to bottom right, #e8e0f5, #e0f2f7, #c1e8f3);
   margin: 0;
   display: flex;
   place-items: center;

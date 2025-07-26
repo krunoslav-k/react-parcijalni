@@ -18,14 +18,21 @@ export default function FormComponent({
   return (
     <div className={styles.userFormWrapper}>
       <form className={styles.userForm} onSubmit={handleSubmit}>
+        <label htmlFor="usernameInput" className={styles.userFormLabel}>
+          GITHUB USERNAME:
+        </label>
         <input
+          id="usernameInput"
           type="text"
           placeholder="e.g. facebook"
           value={username}
           onChange={handleChange}
-          className={styles.userFormInput}
+          className={`${styles.userFormInput} ${styles.userFormElement}`}
         />
-        <button type="submit" className={styles.userFormButton}>
+        <button
+          type="submit"
+          className={`${styles.userFormButton} ${styles.userFormElement}`}
+        >
           GO!
         </button>
       </form>

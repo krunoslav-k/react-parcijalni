@@ -1,0 +1,42 @@
+.userForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+  width: clamp(360px, 33vw, 720px);
+  height: 12rem;
+  padding: 2rem;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.userFormLabel {
+  margin-bottom: -1rem;
+  font-size: 1rem;
+  color: rgb(137, 137, 137);
+  text-align: left;
+}
+
+.userFormElement {
+  font-size: 1rem;
+  height: 3rem;
+  border-radius: 6px;
+  padding: 0 10px;
+}
+
+.userFormInput {
+  border: 1px solid #e0f2f7;
+}
+
+.userFormButton {
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+  background: linear-gradient(to right, #ede8f5, #e0f2f7);
+}
+
+.userFormButton:hover {
+  background: linear-gradient(to right, #e5e0ef, #daebf0);
+  border: 2px solid white;
+}
