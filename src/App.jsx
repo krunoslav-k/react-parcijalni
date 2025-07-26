@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import UserFormComponent from "./components/UserFormComponent/UserFormComponent";
+import FormComponent from "./components/FormComponent/FormComponent";
 import UserDetailsComponent from "./components/UserDetailsComponent/UserDetailsComponent";
 
 function App() {
@@ -33,11 +33,11 @@ function App() {
   return (
     <>
       {!userData && (
-        <UserFormComponent
+        <FormComponent
           username={username}
           onUsernameChange={setUsername}
           onSubmit={handleSubmit}
-        ></UserFormComponent>
+        ></FormComponent>
       )}
 
       {userData && (

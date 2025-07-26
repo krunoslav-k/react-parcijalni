@@ -32,3 +32,12 @@ export default function UserDetailsComponent({
     </div>
   );
 }
+
+UserDetailsComponent.proptypes = {
+  userAvatarSrc: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  userBio: PropTypes.string.isRequired,
+  userLocation: PropTypes.string.isRequired,
+  onReset: PropTypes.func.isRequired,
+  userRepos: PropTypes.array.isRequired,
+};

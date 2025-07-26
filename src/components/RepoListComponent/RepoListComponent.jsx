@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import styles from "./RepoListComponent.module.css";
 
 export default function RepoListComponent({ repos }) {
@@ -13,3 +14,7 @@ export default function RepoListComponent({ repos }) {
     </div>
   );
 }
+
+RepoListComponent.propTypes = {
+  repos: PropTypes.array.isRequired,
+};

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import styles from "./UserFormComponent.module.css";
+import styles from "./FormComponent.module.css";
 
-export default function UserFormComponent({
+export default function FormComponent({
   username,
   onUsernameChange,
   onSubmit,
@@ -33,7 +33,7 @@ export default function UserFormComponent({
   );
 }
 
-UserFormComponent.propTypes = {
+FormComponent.propTypes = {
   username: PropTypes.string.isRequired,
   onUsernameChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
