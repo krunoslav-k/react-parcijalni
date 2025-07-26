@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import styles from "./UserFormComponent.module.css";
 
 export default function UserFormComponent({
   username,
@@ -15,16 +16,16 @@ export default function UserFormComponent({
   };
 
   return (
-    <div className="user-form-wrapper">
-      <form className="user-form" onSubmit={handleSubmit}>
+    <div className={styles.userFormWrapper}>
+      <form className={styles.userForm} onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="e.g. facebook"
           value={username}
           onChange={handleChange}
-          className="user-form-input"
+          className={styles.userFormInput}
         />
-        <button type="submit" className="user-form-button">
+        <button type="submit" className={styles.userFormButton}>
           GO!
         </button>
       </form>

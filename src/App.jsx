@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import UserFormComponent from "./components/UserFormComponent";
-import UserDetailsComponent from "./components/UserDetailsComponent";
+import UserFormComponent from "./components/UserFormComponent/UserFormComponent";
+import UserDetailsComponent from "./components/UserDetailsComponent/UserDetailsComponent";
 
 function App() {
   const [username, setUsername] = useState("");
