@@ -1,0 +1,15 @@
+.reposList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.repoItem {
+  font-size: 0.9rem;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.repoItem:nth-last-child(1) {
+  border: none;
+}
