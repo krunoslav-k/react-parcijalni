@@ -28,6 +28,7 @@ function App() {
 
   function resetUser() {
     setUserData(null);
+    setUsername();
   }
 
   return (
