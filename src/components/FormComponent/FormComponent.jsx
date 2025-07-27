@@ -37,7 +37,7 @@ export default function FormComponent({
 
       <button
         type="submit"
-        className={clsx(styles.userFormButton, sharedStyles.baseField)}
+        className={clsx(sharedStyles.baseButton, sharedStyles.baseField)}
       >
         GO!
       </button>

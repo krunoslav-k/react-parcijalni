@@ -19,15 +19,3 @@
 .userFormInput {
   border: 1px solid #e0f2f7;
 }
-
-.userFormButton {
-  color: white;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  font-weight: 700;
-  background: linear-gradient(to right, #ede8f5, #e0f2f7);
-}
-
-.userFormButton:hover {
-  background: linear-gradient(to right, #e5e0ef, #daebf0);
-  border: 2px solid white;
-}

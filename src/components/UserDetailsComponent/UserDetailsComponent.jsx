@@ -35,10 +35,14 @@ export default function UserDetailsComponent({
       <RepoListComponent repos={userRepos}></RepoListComponent>
 
       <button
-        className={clsx(styles.resetButton, sharedStyles.baseField)}
+        className={clsx(
+          styles.resetButton,
+          sharedStyles.baseButton,
+          sharedStyles.baseField
+        )}
         onClick={onReset}
       >
-        Reset
+        RESET
       </button>
     </div>
   );

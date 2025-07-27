@@ -16,3 +16,18 @@
   border-radius: 6px;
   padding: 0 10px;
 }
+
+.baseButton {
+  color: white;
+  font-weight: 600;
+  background: linear-gradient(to right, #cbc2e2, #b7dbe7);
+}
+
+.baseButton:hover {
+  background: linear-gradient(to right, #cabdea, #a9dbeb);
+  box-shadow: 0 4px 12px rgba(91, 84, 141, 0.3);
+  transform: translateY(-1px);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+}
